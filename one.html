@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html elements</title>
+</head>
+<body style = "background-color : #414141; color: aliceblue ">
+    <h2> Amazing Events </h2>
+    <div>
+        <ul id = "images">
+            <li><img width="200px" id ="photoshop" src="E:\gujarat\AnyConv.com__20240529_183356.jpg" alt="photoshop" </li>
+            <li><img width="200px" id ="photoshop" src="https://www.pexels.com/photo/woman-walking-on-log-in-banff-national-park-alberta-canada-9789940/" alt="photoshop" onclick="alert('Learn')"</li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    // documnet.getElementById('photoshop').onclick = function(){
+    //     alert("Yooooo Learning !!!")
+    // }
+
+    document.getElementById('photoshop').addEventListener('click' , function(){}, false ,alert("Yooo !!!"))
+
+    document.getElementBYId('photoshop').addEventListener('click' , function(e){
+        console.log("Yooooooooooooooooooooo !!!!! ");
+
+
+
+    } , true)
+
+    documeent.getElementBYId('photoshop').adddEventListener('click' , function(e){
+        console.log("Yoooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+        e.stopProagation()
+
+
+    } , false)
+
+    document.getElementById('google').addEventListener('click', function(e){
+        console.log("google clicked");
+        e.preventDefault()
+        e.stopPropagation()
+    }, false)
+
+    document.querySelector('#images').addEventListener('click' , function(e){
+        console.log(e.target.parentNode);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+        //Remove it 
+        removeIt.parentNode.removeChild(removeIt);
+        //Method to Remove images from websites 
+        //List items parent Node 
+         
+        
+    })
+</script>
+</html>
+
+//basics html , css
+
+
+ 
